@@ -30,11 +30,13 @@ button {
   transition: 0.3s;
 }
 
-button:hover  {
+button:hover {
   background-color: #004e81;
 }
 
-
+button:disabled {
+  opacity: 0.5;
+}
 
 .dot {
   width: 20px;

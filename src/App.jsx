@@ -5,7 +5,6 @@ function App() {
 
   const [Create, setCreate] = useState([])
   const [Delete, setDelete] = useState([])
-
   function randomColor() {
     let colorCode = "0123456789ABCDEF"
     let colors = "#"
@@ -55,9 +54,9 @@ function App() {
 
   return (
     <div className='maindiv' onClick={handleDotCrate}>
-      <button onClick={handleReset}>Reset</button>
-      <button onClick={handleUndo} >Undo</button>
-      <button onClick={handleRedu} >Redu</button>
+      <button onClick={handleReset} disabled = {Create.length === 0}>Reset</button>
+      <button onClick={handleUndo} disabled = {Create.length === 0}>Undo</button>
+      <button onClick={handleRedu} disabled = {Delete.length === 0}>Redo</button>
 
       {Create.map(dot => (
         <div
